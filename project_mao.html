@@ -51,7 +51,7 @@
                     <a href="https://twitter.com/MarcellaGiova18?t=4iXJ_Z3X2nwP8Sk8NuOQLw&s=08" class="twitter"><i class="bx bxl-twitter"></i></a>
                     <a href="https://www.instagram.com/marcella_gvn/" class="instagram"><i class="bx bxl-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/marcellagsantos/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/marcellabecker?tab=overview&from=2021-12-01&to=2021-12-31" class="github"><i class="bx bxl-git"></i></a>
+                    <a href="https://github.com/marcellabecker?tab=overview&from=2021-12-01&to=2021-12-31" class="github"><i class="bx bxl-github"></i></a>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
                     <li><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
                     <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
                     <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li class="active"><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+                    <li class="active"><a href="#projects"><i class="bx bx-book-content"></i> Projects</a></li>
                     <!--li><a href="#services"><i class="bx bx-server"></i> Services</a></li-->
                     <!--li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li-->
 
@@ -110,13 +110,14 @@
                     <BR>
                     <BR>
                     <BR>
+                    <BR>
                     <div class="portfolio-info">
                         <h3>Project information</h3>
                         <ul>
                             <li><strong>Category</strong>: Robotic hand</li>
                             <li><strong>Function</strong>: finger movement will initially be controlled by the other hand</li>
                             <li><strong>Project date</strong>: 2021- 2022</li>
-                            <li><strong>Project URL</strong>: <a href="https://ieeecimatec.github.io/project-mao_espelhada/">https://ieeecimatec.github.io/project-mao_espelhada/</a></li>
+                            <li><strong>Project URL</strong>: <a href="https://rascimatec.github.io/project-mirroredhand.html">https://rascimatec.github.io/project-mirroredhand.html</a></li>
                         </ul>
                     </div>
 
@@ -125,10 +126,17 @@
                 <div class="portfolio-description">
                     <h2>PROJECT MÃO-ESPELHADA</h2>
                     <p>
-                        The project consists of creating a robotic upper limb prosthesis, in which the movement of the fingers will initially be controlled by the other hand, hence the name Mirror-Hand. The control will be done using a camera through computer vision.The robotic
-                        hand will initially have to repeat the same movement made by the hand, but this will not always be very useful, so this project will have many improvements in the future.Knowledge of CAD, electronics, computer vision and programming
-                        is required. To develop the program, the Arduino framework was used, in order to program the microcontroller that will develop the moments through some potentiometers. In addition, there is the computer vision part in OpenCV so
-                        that it was possible to identify the fingers with a camera and send the commands to be reproduced by the robotic arm.
+                        The Mirrored Hand is a robotic hand that mimics the movements of a real hand. It is a robotic hand made of 3D printed material that aims to emulate the mobility of a real hand. 
+                        Making use of computer vision a camera will be placed to collect the movements of a hand and the hand to imitate.
+
+                        <h3> hand CAD </h3>
+                        The first part of the project to be done was the hand part. First, anatomy studies were carried out in order to understand the biological mechanisms that involve the human hand.
+                        Then, examples were looked for on the internet to be able to have a basis for the construction. Thus, this first version of the robotic hand was initiated and developed.
+                        <h3> First stage of development </h3>
+                        To facilitate and speed up the tests of the mirrored hand, a kind of structure was made to be able to collect the hand movements without having to use computer vision. 
+                        In this way, this support uses a set of rods to be able to turn potentiometers, and the variation of its resistance will be collected by the Arduino. In this way, using these collected data, the hand moves.
+                        <h3> circuit </h3>
+                        To make sure that the idealized circuit would work as expected, it was first simulated using ThinkerCAD. Your circuit was assembled, your programming done and the circuit proved to be functional.
                     </p>
                 </div>
 

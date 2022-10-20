@@ -57,10 +57,10 @@
 
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                    <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-                    <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li class="active"><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+                    <li><a href="index.html#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                    <li><a href="index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+                    <li><a href="index.html#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                    <li><a href="index.html#projects"><i class="bx bx-book-content"></i> Projects</a></li>
                     <!--li><a href="#services"><i class="bx bx-server"></i> Services</a></li-->
                     <!--li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li-->
 
@@ -100,33 +100,62 @@
                     <div class="owl-carousel portfolio-details-carousel">
                         <img src="assets/img/FOT/4.jpg" class="img-fluid" alt="">
                         <img src="assets/img/BAYMAX/Baymax.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/BAYMAX/BAY.jpeg" class="img-fluid" alt="">
+                        <img src="assets/img/BAYMAX/B.jpeg" class="img-fluid" alt="">
 
                     </div>
-
+                    <BR>
+                    <BR>
+                    <BR>
+                    <BR>
+                    <BR>
+                    <BR>
+                    <BR>
                     <div class="portfolio-info">
                         <h3>Project informations</h3>
                         <ul>
                             <li><strong>Category</strong>: Robot</li>
                             <li><strong>Function</strong>: Autonomous robot capable of assisting health workers.</li>
                             <li><strong>Project date</strong>: 2021- 2024</li>
-                            <li><strong>Project URL</strong>: <a href="https://ieeecimatec.github.io/project-bayieeemax/">https://ieeecimatec.github.io/project-bayieeemax/</a></li>
+                            <li><strong>Project URL</strong>: <a href="https://rascimatec.github.io/baymax.html">https://rascimatec.github.io/baymax.html</a></li>
                         </ul>
                     </div>
 
                 </div>
 
                 <div class="portfolio-description">
-                    <h2>PROJECT BAYIEEEMAX</h2>
+                    <h3>PROJECT BAYIEEEMAX</h3>
                     <p>
-                        The project consists of the construction of an autonomous robot capable of assisting health agents in the screening process by measuring parameters of the patient's health status, such as blood pressure, oxygenation and temperature and recording them
-                        in the respective patient files.
+                        The project consists of building an autonomous robot capable of assisting health agents in the triage process by measuring patient health parameters such as blood pressure, oxygenation, and temperature and recording them in the respective patient records. The robot will display questions on an LCD screen and will also sound them out through a loudspeaker and receive the patient's answers via voice commands.
                         <BR>
-                        <BR> The robot will display questions on an LCD screen and will also issue them through a loudspeaker and receive the patient's answers through voice commands. During the execution of the project, a model will be built in a 3D modeling
-                        software for the robot's body for later 3D printing.
+                        <BR> During the execution of the project, a model will be built in 3D modeling software for the robot's body for later 3D printing. In addition, a printed circuit board will be developed to interconnect the sensors, actuators, and controller, as well as rectify the input voltage in order to make it available for charging the batteries. Finally, the robot's operation logic will be implemented by means of the ROS (Robot Operating System) framework.
+                        The realization of the project was only possible thanks to the funding of $2,000 dollars received through a RAS Chapter Initiative Grant from the RAS.
                         <BR>
-                        <BR> In addition, a printed circuit board will be developed responsible for interconnecting the sensors, actuators and controller, as well as rectifying the input voltage in order to make it available for charging the batteries. Finally,
-                        the robot's operating logic will be implemented through the ROS (Robot Operating System) framework.
+                        <BR>
+                        <h3> Subsystems Definition </h3>
+                        In the very first stages of the project a PBS (Project Structure Board) was built containing all the essential subsystems and which components would be part of each one. The image below shows this structure, divided between: Feeding, Perception, Processing, Acting and Monitoring.
+                        <BR>
+                        <BR>
+                        <h3> Simulation</h3>
+                        ROS is a framework that has a number of useful tools for robot development. For example, it is capable of simplifying for the user the process of communication between the different components of a robot, such as the motors, sensors, batteries, and the software through a system based on topics and messages.
+                        <BR>
+                        <BR>ROS was adopted as a tool in this project for the simulation and implementation of the robot's logic because it is an open-source project that has several packages already developed, natively supports C++ and Python programming languages, and also because it can be loaded directly into embedded systems, such as the Raspberry Pi 4, the controller that will work as the robot's "brain".
+                        <BR>
+                        <BR>A major advantage of simulation is that complex virtual environments similar to real hospitals can be built, which would be difficult to access for all the testing needed throughout the project. In addition, faults can be identified and improvements implemented without the need to have the robot in hand or the construction of a training ground.
+                        <BR>
+                        <BR>We are currently developing teleoperation, which will be used for testing purposes on the robot after it is assembled, autonomous navigation, and integration with the sensors that will be used during triage.
+                        <BR>
+                        <BR>
+                        <h3> Electronics</h3>
+                        KiCad is an open source computer program for computer-aided electronic design, with the objective of facilitating the conception of layouts and their conversion to printed circuit boards.
+                        <BR>
+                        <BR>KiCad was used in this project as a tool for making the printed circuit board (PCB), which was built by assembling the circuit itself, placing essential components for the robot's operation, and because it is Open Source, it allows the use of 3D models and footprints, created by your company or users of this Software.
+                        <BR>
+                        <BR>The use of KiCad allows the user to develop a circuit in advance, building a board that will be made for the desired operation, with the desired components, avoiding expenses with risk of misplacement or lack of space between components. In addition, possible circuit connection faults are identified during circuit construction, and the software itself alerts you of any connection errors found.
+                        <BR>
+                        <BR>Hodiernamente, is being developed the Main board, having in its circuit a MicroController called STM32F103C8T6, which will connect to the Motherboard, whose main component is the Raspberry PI 4 Model B, which will monitor this Microcontroller. In this way, it allows the operation of the motors, sensors, GPs and voice recognition that will be used in the medical triage of patients.
                     </p>
+                    
                 </div>
 
             </div>
